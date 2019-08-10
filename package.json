@@ -4,7 +4,9 @@
   "description": "The server for the colin-spaull app",
   "main": "server.js",
   "dependencies": {
-    "express": "^4.17.1"
+    "@hapi/joi": "^15.1.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.6.8"
   },
   "devDependencies": {
     "concurrently": "^4.1.1"
@@ -16,5 +18,10 @@
     "dev": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\""
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "nodemonConfig": {
+    "ignore": [
+      "client/*"
+    ]
+  }
 }
